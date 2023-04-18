@@ -2,7 +2,7 @@
     --boxColor: #0ff7
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
   }
   * {
@@ -27,7 +27,7 @@
   }
   #root, #__next {
     isolation: isolate;
-  }
+  } */
 
   body{
     min-height: 100vh;
@@ -46,15 +46,24 @@
     height: 1em;
     border-radius: 50%;
     background-color: tomato;
+    position: absolute;
+    left: -.5em;
+    bottom: 1em;
   }
 
   .cube{
     width: 2em;
     height: 2em;
     background-color: var(--boxColor);
+    position: absolute;
+    top: -1em;
+    left: -1em;
   }
 
   .floor{
+    position: absolute;
+    top: 1em;
+    transform: translate(-50%, -50%);
     width: 5em;
     height: 5em;
     background-image: repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
